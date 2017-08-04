@@ -37,6 +37,10 @@
     for (Employee * em in [organ employeesWithSalary:1300 tolerance:200]) {
         NSLog(@"Tolerance: %i", em.salary);
     }
+    
+    [organ removeEmployee:empl];
+    
+    NSLog(@"Avarage salary: %f", [organ calculateAverageSalary]);
 
     return YES;
 }

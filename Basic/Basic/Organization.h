@@ -19,5 +19,5 @@
 - (double) calculateAverageSalary;
 - (int) employeeWithLowestSalary;
 - (NSMutableArray<Employee *> *)employeesWithSalary:(int) salary tolerance:(int)tolerance;
-
+- (void)removeEmployee:(Employee *)employee;
 @end
