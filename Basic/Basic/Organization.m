@@ -99,4 +99,11 @@
     return empls.copy;
 }
 
+- (void)removeEmployee:(Employee *)employee
+{
+    NSMutableArray *mutEmployees = self.employees.mutableCopy;
+    [mutEmployees removeObject:employee];
+    self.employees = mutEmployees.copy;
+}
+
 @end
