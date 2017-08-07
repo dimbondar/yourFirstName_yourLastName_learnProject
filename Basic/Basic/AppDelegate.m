@@ -3,7 +3,7 @@
 //  Basic
 //
 //  Created by Dima on 04.08.17.
-//  Copyright © 2017 Dima. All rights reserved.
+//  Copyright © 2017 Dima Bondar. All rights reserved.
 //
 
 #import "AppDelegate.h"

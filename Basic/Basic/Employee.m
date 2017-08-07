@@ -3,15 +3,15 @@
 //  Basic
 //
 //  Created by Dima on 04.08.17.
-//  Copyright © 2017 Dima. All rights reserved.
+//  Copyright © 2017 Dima Bondar. All rights reserved.
 //
 
 #import "Employee.h"
 
 @interface Employee()
 
-@property(strong, nonatomic) NSString *firstName;
-@property(strong, nonatomic) NSString *lastName;
+@property (strong, nonatomic) NSString *firstName;
+@property (strong, nonatomic) NSString *lastName;
 
 @end
 

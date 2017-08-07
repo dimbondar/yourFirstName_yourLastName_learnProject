@@ -3,7 +3,7 @@
 //  Basic
 //
 //  Created by Dima on 04.08.17.
-//  Copyright © 2017 Dima. All rights reserved.
+//  Copyright © 2017 Dima Bondar. All rights reserved.
 //
 
 #import "Organization.h"
@@ -18,7 +18,7 @@
 
 @implementation Organization
 
-- (id)initWithName:(NSString *) organizationName
+- (id)initWithName:(NSString *)organizationName
 {
     self = [super init];
     
