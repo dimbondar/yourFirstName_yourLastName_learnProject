@@ -10,9 +10,6 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *label;
-@property (weak, nonatomic) IBOutlet UITextField *field;
-@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
 

@@ -10,11 +10,11 @@
 #import "Employee.h"
 #include "stdlib.h"
 
-@interface Organization()
-
-@property(strong, nonatomic)NSArray<Employee *> *employees;
-
-@end
+//@interface Organization()
+//
+//@property(strong, nonatomic)NSArray<Employee *> *employees;
+//
+//@end
 
 @implementation Organization
 

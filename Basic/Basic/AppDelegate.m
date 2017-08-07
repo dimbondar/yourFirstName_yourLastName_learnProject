@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate.h"
+#import "MainViewController.h"
 #import "Employee.h"
 #import "Organization.h"
 #include "stdlib.h"
@@ -21,6 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+        
     Employee *empl = [[Employee alloc] initWithFirstName:@"Dima" lastName:@"Bondar" salary:1200];
     
     NSLog(@"Full name: %@", [empl fullName]);

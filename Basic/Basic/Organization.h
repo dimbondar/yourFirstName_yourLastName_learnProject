@@ -13,6 +13,8 @@
 
 @property(strong, nonatomic) NSString* name;
 
+@property(strong, nonatomic)NSArray<Employee *> *employees;
+
 - (id) initWithName:(NSString *) organizationName;
 - (void) addEmployeeWithName:(NSString *) employeeName;
 - (void) addEmployee:(Employee *) employee;
