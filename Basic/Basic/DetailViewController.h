@@ -11,6 +11,6 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) Employee *employee;
-@property (strong, nonatomic) IBOutlet UILabel *salary;
+@property (weak, nonatomic) IBOutlet UILabel *salary;
 
 @end

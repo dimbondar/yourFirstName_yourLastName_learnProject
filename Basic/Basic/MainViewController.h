@@ -11,6 +11,4 @@
 #import "DetailViewController.h"
 @interface MainViewController : UITableViewController
 
-@property(strong, nonatomic) Organization *organization;
-
 @end

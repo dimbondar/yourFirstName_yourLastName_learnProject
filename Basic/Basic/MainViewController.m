@@ -11,6 +11,7 @@
 
 @interface MainViewController()
 
+@property(strong, nonatomic) Organization *organization;
 @property(strong, nonatomic) Employee *em;
 
 @end
