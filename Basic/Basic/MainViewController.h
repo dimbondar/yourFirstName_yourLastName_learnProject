@@ -2,7 +2,7 @@
 //  MainViewController.h
 //  Basic
 //
-//  Created by Dima on 07.08.17.
+//  Created by Dima Bondar on 07.08.17.
 //  Copyright © 2017 Dima Bondar. All rights reserved.
 //
 
