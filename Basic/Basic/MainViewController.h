@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Organization.h"
 #import "DetailViewController.h"
+#import "CreateEmployeeViewController.h"
 
-@interface MainViewController : UITableViewController
+@interface MainViewController : UITableViewController<CreateEmployeeDelegate>
 
 @end

@@ -16,6 +16,7 @@
 		324394811F34B69F00425249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243947F1F34B69F00425249 /* LaunchScreen.storyboard */; };
 		3243948D1F34B71200425249 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 3243948C1F34B71200425249 /* Employee.m */; };
 		324394901F34B77200425249 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3243948F1F34B77200425249 /* Organization.m */; };
+		3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		3243948C1F34B71200425249 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		3243948E1F34B77200425249 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organization.h; sourceTree = "<group>"; };
 		3243948F1F34B77200425249 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
+		3261CFA31F39BFD90069F2C2 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
+		3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				32185B811F3865E70023AF95 /* MainViewController.m */,
 				32185B831F3888A30023AF95 /* DetailViewController.h */,
 				32185B841F3888A30023AF95 /* DetailViewController.m */,
+				3261CFA31F39BFD90069F2C2 /* CreateEmployeeViewController.h */,
+				3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */,
 				324394741F34B69F00425249 /* AppDelegate.h */,
 				324394751F34B69F00425249 /* AppDelegate.m */,
 				3243947A1F34B69F00425249 /* Main.storyboard */,
@@ -167,6 +172,7 @@
 			files = (
 				3243948D1F34B71200425249 /* Employee.m in Sources */,
 				324394761F34B69F00425249 /* AppDelegate.m in Sources */,
+				3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */,
 				324394731F34B69F00425249 /* main.m in Sources */,
 				32185B821F3865E70023AF95 /* MainViewController.m in Sources */,
 				324394901F34B77200425249 /* Organization.m in Sources */,
