@@ -2,23 +2,23 @@
 //  Organization.m
 //  Basic
 //
-//  Created by Dima on 04.08.17.
-//  Copyright © 2017 Dima. All rights reserved.
+//  Created by Dima Bondar on 04.08.17.
+//  Copyright © 2017 Dima Bondar. All rights reserved.
 //
 
 #import "Organization.h"
 #import "Employee.h"
 #include "stdlib.h"
 
-@interface Organization()
-
-@property(strong, nonatomic)NSArray<Employee *> *employees;
-
-@end
+//@interface Organization()
+//
+//@property(strong, nonatomic)NSArray<Employee *> *employees;
+//
+//@end
 
 @implementation Organization
 
-- (id)initWithName:(NSString *) organizationName
+- (id)initWithName:(NSString *)organizationName
 {
     self = [super init];
     

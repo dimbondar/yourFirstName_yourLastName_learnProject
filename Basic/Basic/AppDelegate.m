@@ -2,12 +2,13 @@
 //  AppDelegate.m
 //  Basic
 //
-//  Created by Dima on 04.08.17.
-//  Copyright © 2017 Dima. All rights reserved.
+//  Created by Dima Bondar on 04.08.17.
+//  Copyright © 2017 Dima Bondar. All rights reserved.
 //
 
 #import "AppDelegate.h"
 #import "AppDelegate.h"
+#import "MainViewController.h"
 #import "Employee.h"
 #import "Organization.h"
 #include "stdlib.h"
@@ -21,6 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+        
     Employee *empl = [[Employee alloc] initWithFirstName:@"Dima" lastName:@"Bondar" salary:1200];
     
     NSLog(@"Full name: %@", [empl fullName]);
