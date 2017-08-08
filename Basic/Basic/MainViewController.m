@@ -55,6 +55,22 @@
         DetailViewController *detailVC = (DetailViewController *)segue.destinationViewController;
         detailVC.employee = self.selectedEmployee;
     }
+    else if ([segue.identifier isEqualToString:@"toCreateEmployee"])
+    {
+        CreateEmployeeViewController *createEVC = (CreateEmployeeViewController *)segue.destinationViewController;
+        createEVC.delagate = self;
+    }
+}
+
+- (IBAction)onAddClick:(id)sender
+{
+    [self performSegueWithIdentifier:@"toCreateEmployee" sender:self];
+}
+
+- (void)onSave:(Employee *)newEmployee
+{
+    [self.organization addEmployee:newEmployee];
+    [self.tableView reloadData];
 }
 
 @end

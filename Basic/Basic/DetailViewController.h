@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Employee.h"
+
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) Employee *employee;
