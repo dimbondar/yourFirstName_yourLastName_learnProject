@@ -17,23 +17,34 @@
 
 @implementation Employee
 
-- (id)initWithFirstName:(NSString *)fn
-               lastName:(NSString *)ln
-                 salary:(int)money
+@dynamic firstName;
+@dynamic lastName;
+@dynamic salary;
+@dynamic fullName;
+
+- (instancetype)iniitWithFirstName:(NSString *)fn
+                          lastName:(NSString *)ln
+                            salary:(int)money
 {
-    self = [super init];
-    if (self)
-    {
-        self.firstName = fn;
-        self.lastName = ln;
-        self.salary = money;
-    }
+    self.fullName = [NSString stringWithFormat:@"%@ %@",fn,ln];
+    self.salary = money;
+    
     return self;
 }
 
-- (NSString *)fullName
+
+- (void)initWithFirstName:(NSString *)fn
+                 lastName:(NSString *)ln
+                   salary:(int)money
 {
-    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
+    self.fullName = [NSString stringWithFormat:@"%@ %@",fn,ln];
+    self.salary = money;
+    
 }
+
+//- (NSString *)fullName
+//{
+//    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
+//}
 
 @end

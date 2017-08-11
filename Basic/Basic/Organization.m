@@ -18,13 +18,18 @@
 
 @implementation Organization
 
+@dynamic name;
+@dynamic employees;
+
+
 - (id)initWithName:(NSString *)organizationName
 {
     self = [super init];
     
     self.name = organizationName;
-    self.employees = [[NSMutableArray alloc] init];
+    self.employees = [[NSSet alloc] init];
     return self;
+
 }
 
 - (void)addEmployeeWithName:(NSString *)employeeName
@@ -35,8 +40,8 @@
     {
         int randSalary = (arc4random_uniform(490) + 10) * 10;
         NSLog(@"Random salary: %i", randSalary);
-        Employee *employee =
-        [[Employee alloc] initWithFirstName:names[0] lastName:names[1] salary:randSalary];
+        Employee *employee = [[Employee alloc] init];
+        [employee initWithFirstName:names[0] lastName:names[1] salary:randSalary];
         [self addEmployee:employee];
     }
     
@@ -44,7 +49,7 @@
 
 - (void)addEmployee:(Employee *)employee
 {
-    self.employees = [self.employees arrayByAddingObject:employee];
+    self.employees = [self.employees setByAddingObject:employee];
 }
 
 - (double)calculateAverageSalary
@@ -74,7 +79,7 @@
         return 0;
     }
     
-    int lowestSalary = self.employees.firstObject.salary;
+    int lowestSalary = self.employees.anyObject.salary;
     
     for (Employee * em in self.employees)
     {

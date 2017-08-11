@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		32185B821F3865E70023AF95 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32185B811F3865E70023AF95 /* MainViewController.m */; };
 		32185B851F3888A30023AF95 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32185B841F3888A30023AF95 /* DetailViewController.m */; };
+		3230A7611F3DAF3D00E68F5B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3230A75F1F3DAF3D00E68F5B /* Model.xcdatamodeld */; };
 		324394731F34B69F00425249 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 324394721F34B69F00425249 /* main.m */; };
 		324394761F34B69F00425249 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 324394751F34B69F00425249 /* AppDelegate.m */; };
 		3243947C1F34B69F00425249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243947A1F34B69F00425249 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		32185B811F3865E70023AF95 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		32185B831F3888A30023AF95 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		32185B841F3888A30023AF95 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3230A7601F3DAF3D00E68F5B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		3243946E1F34B69F00425249 /* Basic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		324394721F34B69F00425249 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		324394741F34B69F00425249 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		324394701F34B69F00425249 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				3230A75F1F3DAF3D00E68F5B /* Model.xcdatamodeld */,
 				3243948B1F34B71200425249 /* Employee.h */,
 				3243948C1F34B71200425249 /* Employee.m */,
 				3243948E1F34B77200425249 /* Organization.h */,
@@ -173,6 +176,7 @@
 				3243948D1F34B71200425249 /* Employee.m in Sources */,
 				324394761F34B69F00425249 /* AppDelegate.m in Sources */,
 				3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */,
+				3230A7611F3DAF3D00E68F5B /* Model.xcdatamodeld in Sources */,
 				324394731F34B69F00425249 /* main.m in Sources */,
 				32185B821F3865E70023AF95 /* MainViewController.m in Sources */,
 				324394901F34B77200425249 /* Organization.m in Sources */,
@@ -338,6 +342,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3230A75F1F3DAF3D00E68F5B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3230A7601F3DAF3D00E68F5B /* Model.xcdatamodel */,
+			);
+			currentVersion = 3230A7601F3DAF3D00E68F5B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 324394661F34B69F00425249 /* Project object */;
 }
