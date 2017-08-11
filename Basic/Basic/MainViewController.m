@@ -30,14 +30,14 @@
     if( count== 0)
     {
         NSError *error = nil;
-        if (![self.managedObjectContext save:&error]) {
+        if (![self.managedObjectContext save:&error])
+        {
             NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
         }
     } else
     {
         self.organization = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil].firstObject;
     }
-    
     self.title = self.organization.name;
 }
 
@@ -75,33 +75,26 @@
     }
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"ssssssssssssss");
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
         Employee *ob = self.organization.employees.allObjects[(int)indexPath.row];
         [self.organization removeEmployee: ob];
         [self.managedObjectContext deleteObject: ob];
         NSError *error = nil;
         // Save the object to persistent store
-        if (![self.managedObjectContext save:&error]) {
+        if (![self.managedObjectContext save:&error])
+        {
             NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
         }
         
         [self.tableView reloadData];
-//        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-//        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
-//        
-//        NSError *error = nil;
-//        if (![context save:&error]) {
-//            // Replace this implementation with code to handle the error appropriately.
-//            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//            NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-//            abort();
-//        }
     }
 }
 
@@ -117,7 +110,8 @@
     
     NSError *error = nil;
     // Save the object to persistent store
-    if (![self.managedObjectContext save:&error]) {
+    if (![self.managedObjectContext save:&error])
+    {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
     

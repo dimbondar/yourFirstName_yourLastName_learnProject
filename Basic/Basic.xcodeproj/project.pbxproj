@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3209A1DB1F3DF91500BDDEA6 /* Employee+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209A1D81F3DF91500BDDEA6 /* Employee+CoreDataClass.m */; };
+		3209A1DC1F3DF91500BDDEA6 /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209A1DA1F3DF91500BDDEA6 /* Employee+CoreDataProperties.m */; };
+		3209A1E11F3DF92C00BDDEA6 /* Organization+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209A1DE1F3DF92C00BDDEA6 /* Organization+CoreDataClass.m */; };
+		3209A1E21F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209A1E01F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m */; };
 		32185B821F3865E70023AF95 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32185B811F3865E70023AF95 /* MainViewController.m */; };
 		32185B851F3888A30023AF95 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32185B841F3888A30023AF95 /* DetailViewController.m */; };
 		3230A7611F3DAF3D00E68F5B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3230A75F1F3DAF3D00E68F5B /* Model.xcdatamodeld */; };
@@ -15,12 +19,18 @@
 		3243947C1F34B69F00425249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243947A1F34B69F00425249 /* Main.storyboard */; };
 		3243947E1F34B69F00425249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3243947D1F34B69F00425249 /* Assets.xcassets */; };
 		324394811F34B69F00425249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243947F1F34B69F00425249 /* LaunchScreen.storyboard */; };
-		3243948D1F34B71200425249 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 3243948C1F34B71200425249 /* Employee.m */; };
-		324394901F34B77200425249 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3243948F1F34B77200425249 /* Organization.m */; };
 		3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3209A1D71F3DF91500BDDEA6 /* Employee+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Employee+CoreDataClass.h"; path = "Basic/Employee+CoreDataClass.h"; sourceTree = "<group>"; };
+		3209A1D81F3DF91500BDDEA6 /* Employee+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Employee+CoreDataClass.m"; path = "Basic/Employee+CoreDataClass.m"; sourceTree = "<group>"; };
+		3209A1D91F3DF91500BDDEA6 /* Employee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Employee+CoreDataProperties.h"; path = "Basic/Employee+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3209A1DA1F3DF91500BDDEA6 /* Employee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Employee+CoreDataProperties.m"; path = "Basic/Employee+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3209A1DD1F3DF92C00BDDEA6 /* Organization+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Organization+CoreDataClass.h"; path = "Basic/Organization+CoreDataClass.h"; sourceTree = "<group>"; };
+		3209A1DE1F3DF92C00BDDEA6 /* Organization+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Organization+CoreDataClass.m"; path = "Basic/Organization+CoreDataClass.m"; sourceTree = "<group>"; };
+		3209A1DF1F3DF92C00BDDEA6 /* Organization+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Organization+CoreDataProperties.h"; path = "Basic/Organization+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3209A1E01F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Organization+CoreDataProperties.m"; path = "Basic/Organization+CoreDataProperties.m"; sourceTree = "<group>"; };
 		32185B801F3865E70023AF95 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		32185B811F3865E70023AF95 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		32185B831F3888A30023AF95 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -34,10 +44,6 @@
 		3243947D1F34B69F00425249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		324394801F34B69F00425249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		324394821F34B69F00425249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3243948B1F34B71200425249 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
-		3243948C1F34B71200425249 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
-		3243948E1F34B77200425249 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organization.h; sourceTree = "<group>"; };
-		3243948F1F34B77200425249 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
 		3261CFA31F39BFD90069F2C2 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +62,14 @@
 		324394651F34B69F00425249 = {
 			isa = PBXGroup;
 			children = (
+				3209A1DD1F3DF92C00BDDEA6 /* Organization+CoreDataClass.h */,
+				3209A1DE1F3DF92C00BDDEA6 /* Organization+CoreDataClass.m */,
+				3209A1DF1F3DF92C00BDDEA6 /* Organization+CoreDataProperties.h */,
+				3209A1E01F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m */,
+				3209A1D71F3DF91500BDDEA6 /* Employee+CoreDataClass.h */,
+				3209A1D81F3DF91500BDDEA6 /* Employee+CoreDataClass.m */,
+				3209A1D91F3DF91500BDDEA6 /* Employee+CoreDataProperties.h */,
+				3209A1DA1F3DF91500BDDEA6 /* Employee+CoreDataProperties.m */,
 				324394701F34B69F00425249 /* Basic */,
 				3243946F1F34B69F00425249 /* Products */,
 			);
@@ -73,10 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				3230A75F1F3DAF3D00E68F5B /* Model.xcdatamodeld */,
-				3243948B1F34B71200425249 /* Employee.h */,
-				3243948C1F34B71200425249 /* Employee.m */,
-				3243948E1F34B77200425249 /* Organization.h */,
-				3243948F1F34B77200425249 /* Organization.m */,
 				32185B801F3865E70023AF95 /* MainViewController.h */,
 				32185B811F3865E70023AF95 /* MainViewController.m */,
 				32185B831F3888A30023AF95 /* DetailViewController.h */,
@@ -173,14 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3243948D1F34B71200425249 /* Employee.m in Sources */,
 				324394761F34B69F00425249 /* AppDelegate.m in Sources */,
 				3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */,
 				3230A7611F3DAF3D00E68F5B /* Model.xcdatamodeld in Sources */,
 				324394731F34B69F00425249 /* main.m in Sources */,
 				32185B821F3865E70023AF95 /* MainViewController.m in Sources */,
-				324394901F34B77200425249 /* Organization.m in Sources */,
+				3209A1DB1F3DF91500BDDEA6 /* Employee+CoreDataClass.m in Sources */,
+				3209A1E21F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m in Sources */,
 				32185B851F3888A30023AF95 /* DetailViewController.m in Sources */,
+				3209A1DC1F3DF91500BDDEA6 /* Employee+CoreDataProperties.m in Sources */,
+				3209A1E11F3DF92C00BDDEA6 /* Organization+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

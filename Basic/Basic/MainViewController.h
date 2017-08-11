@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Organization.h"
+#import "Organization+CoreDataClass.h"
+#import "Employee+CoreDataClass.h"
 #import "DetailViewController.h"
 #import "CreateEmployeeViewController.h"
 #import <CoreData/CoreData.h>

@@ -1,26 +1,15 @@
 //
-//  Organization.m
+//  Organization+CoreDataClass.m
 //  Basic
 //
-//  Created by Dima Bondar on 04.08.17.
-//  Copyright © 2017 Dima Bondar. All rights reserved.
+//  Created by Dima Bondar on 11.08.17.
+//  Copyright © 2017 Dima. All rights reserved.
 //
 
-#import "Organization.h"
-#import "Employee.h"
-#include "stdlib.h"
-
-//@interface Organization()
-//
-//@property(strong, nonatomic)NSArray<Employee *> *employees;
-//
-//@end
+#import "Organization+CoreDataClass.h"
+#import "Employee+CoreDataClass.h"
 
 @implementation Organization
-
-@dynamic name;
-@dynamic employees;
-
 
 - (id)initWithName:(NSString *)organizationName
 {
@@ -29,7 +18,7 @@
     self.name = organizationName;
     self.employees = [[NSSet alloc] init];
     return self;
-
+    
 }
 
 - (void)addEmployeeWithName:(NSString *)employeeName

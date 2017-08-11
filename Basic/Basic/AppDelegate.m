@@ -9,8 +9,6 @@
 #import "AppDelegate.h"
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "Employee.h"
-#import "Organization.h"
 #include "stdlib.h"
 
 @interface AppDelegate () <UINavigationControllerDelegate>
@@ -26,14 +24,6 @@
     navigation.delegate = self;
     MainViewController *mainView = (MainViewController*)[navigation topViewController];
     mainView.managedObjectContext = self.persistentContainer.viewContext;
-    //    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    //    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
-    //    splitViewController.delegate = self;
-    //
-    //    UINavigationController *masterNavigationController = splitViewController.;
-    //    MainViewController *controller = (MainViewController *)masterNavigationController.topViewController;
-    
-    
     return YES;
 }
 
