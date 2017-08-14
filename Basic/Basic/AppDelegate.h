@@ -13,7 +13,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
+@property (strong, nonatomic) NSPersistentContainer *persistentContainer;
+
++(AppDelegate *)instance;
 
 @end
 

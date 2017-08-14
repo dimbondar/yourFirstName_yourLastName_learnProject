@@ -8,7 +8,6 @@
 
 #import "Organization+CoreDataClass.h"
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Organization (CoreDataProperties)
@@ -17,15 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, retain) NSSet<Employee *> *employees;
-
-@end
-
-@interface Organization (CoreDataGeneratedAccessors)
-
-- (void)addEmployeesObject:(Employee *)value;
-- (void)removeEmployeesObject:(Employee *)value;
-- (void)addEmployees:(NSSet<Employee *> *)values;
-- (void)removeEmployees:(NSSet<Employee *> *)values;
 
 @end
 

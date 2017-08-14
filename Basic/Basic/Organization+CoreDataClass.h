@@ -15,14 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Organization : NSManagedObject
 
-- (id)initWithName:(NSString *)organizationName;
-- (void)addEmployeeWithName:(NSString *)employeeName;
-- (void)addEmployee:(Employee *)employee;
-- (double)calculateAverageSalary;
-- (int)employeeWithLowestSalary;
-- (NSMutableArray<Employee *> *)employeesWithSalary:(int) salary tolerance:(int)tolerance;
-- (void)removeEmployee:(Employee *)employee;
-
 @end
 
 NS_ASSUME_NONNULL_END

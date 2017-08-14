@@ -1,14 +1,14 @@
 //
-//  Employee+CoreDataClass.m
+//  Employee+Custom.m
 //  Basic
 //
-//  Created by Dima Bondar on 11.08.17.
+//  Created by Dima Bondar on 14.08.17.
 //  Copyright © 2017 Dima. All rights reserved.
 //
 
-#import "Employee+CoreDataClass.h"
+#import "Employee+Custom.h"
 
-@implementation Employee
+@implementation Employee(CustomEmployee)
 
 - (void)initWithFirstName:(NSString *)fn
                  lastName:(NSString *)ln

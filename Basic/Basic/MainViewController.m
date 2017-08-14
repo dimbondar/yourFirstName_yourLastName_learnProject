@@ -8,6 +8,9 @@
 
 #import "MainViewController.h"
 #import "DetailViewController.h"
+#import "AppDelegate.h"
+#import "Organization+Custom.h"
+#import "Employee+Custom.h"
 
 @interface MainViewController()
 
@@ -20,24 +23,24 @@
 
 - (void) viewDidLoad
 {
-    
-    NSEntityDescription *decs = [NSEntityDescription entityForName:@"OrganizationModel" inManagedObjectContext:self.managedObjectContext];
-    self.organization.name = @"bbn";
-    self.organization = [[Organization alloc] initWithEntity:decs insertIntoManagedObjectContext:self.managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"OrganizationModel"];
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name = %@",self.organization.name]];
-    int count = (int)[self.managedObjectContext countForFetchRequest:fetchRequest error:nil];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name = %@",@"ggg"]];
+    int count = (int)[[[AppDelegate instance] persistentContainer].viewContext countForFetchRequest:fetchRequest error:nil];
+    
     if( count== 0)
     {
+        self.organization = [NSEntityDescription insertNewObjectForEntityForName:@"OrganizationModel" inManagedObjectContext:[[AppDelegate instance] persistentContainer].viewContext];
+        self.organization.name = @"ggg";
         NSError *error = nil;
-        if (![self.managedObjectContext save:&error])
+        if (![[[AppDelegate instance] persistentContainer].viewContext save:&error])
         {
             NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
         }
     } else
     {
-        self.organization = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil].firstObject;
+        self.organization = [[[AppDelegate instance] persistentContainer].viewContext executeFetchRequest:fetchRequest error:nil].firstObject;
     }
+    
     self.title = self.organization.name;
 }
 
@@ -68,10 +71,10 @@
     }
     else if ([segue.identifier isEqualToString:@"toCreateEmployee"])
     {
-        NSEntityDescription *decs = [NSEntityDescription entityForName:@"EmployeeModel" inManagedObjectContext:self.managedObjectContext];
         CreateEmployeeViewController *createEVC = (CreateEmployeeViewController *)segue.destinationViewController;
         createEVC.delagate = self;
-        createEVC.employee = [[Employee alloc] initWithEntity:decs insertIntoManagedObjectContext:self.managedObjectContext];
+        Employee *emplo = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"EmployeeModel" inManagedObjectContext:[[AppDelegate instance] persistentContainer].viewContext];
+        createEVC.employee = emplo;
     }
 }
 
@@ -85,11 +88,10 @@
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         Employee *ob = self.organization.employees.allObjects[(int)indexPath.row];
-        [self.organization removeEmployee: ob];
-        [self.managedObjectContext deleteObject: ob];
+        [[[AppDelegate instance] persistentContainer].viewContext deleteObject: ob];
         NSError *error = nil;
         // Save the object to persistent store
-        if (![self.managedObjectContext save:&error])
+        if (![[[AppDelegate instance] persistentContainer].viewContext save:&error])
         {
             NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
         }
@@ -110,7 +112,7 @@
     
     NSError *error = nil;
     // Save the object to persistent store
-    if (![self.managedObjectContext save:&error])
+    if (![[[AppDelegate instance] persistentContainer].viewContext save:&error])
     {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }

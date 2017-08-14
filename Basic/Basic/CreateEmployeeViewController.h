@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Employee+CoreDataClass.h"
+@class Employee;
 
 @protocol CreateEmployeeDelegate <NSObject>
 

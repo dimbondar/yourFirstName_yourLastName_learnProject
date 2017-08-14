@@ -7,6 +7,7 @@
 //
 
 #import "CreateEmployeeViewController.h"
+#import "Employee+Custom.h"
 
 @interface CreateEmployeeViewController ()
 

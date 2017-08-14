@@ -2,7 +2,7 @@
 //  Employee+CoreDataProperties.m
 //  Basic
 //
-//  Created by Dima Bondar on 11.08.17.
+//  Created by Dima Bondar on 14.08.17.
 //  Copyright © 2017 Dima. All rights reserved.
 //
 
@@ -16,5 +16,6 @@
 
 @dynamic fullName;
 @dynamic salary;
+@dynamic organization;
 
 @end

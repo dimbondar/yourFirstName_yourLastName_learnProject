@@ -2,7 +2,7 @@
 //  Employee+CoreDataProperties.h
 //  Basic
 //
-//  Created by Dima Bondar on 11.08.17.
+//  Created by Dima Bondar on 14.08.17.
 //  Copyright © 2017 Dima. All rights reserved.
 //
 
@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *fullName;
 @property (nonatomic) int32_t salary;
+@property (nullable, nonatomic, retain) Organization *organization;
 
 @end
 
