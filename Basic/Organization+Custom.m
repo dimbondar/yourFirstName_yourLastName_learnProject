@@ -11,30 +11,6 @@
 
 @implementation Organization(CustomOrganization)
 
-- (id)initWithName:(NSString *)organizationName
-{
-    self = [super init];
-    self.name = organizationName;
-    self.employees = [[NSSet alloc] init];
-    return self;
-    
-}
-
-- (void)addEmployeeWithName:(NSString *)employeeName
-{
-    NSArray<NSString *> *names = [employeeName componentsSeparatedByString:@" "];
-    
-    if(([names count]) == 2)
-    {
-        int randSalary = (arc4random_uniform(490) + 10) * 10;
-        NSLog(@"Random salary: %i", randSalary);
-        Employee *employee = [[Employee alloc] init];
-        [employee initWithFirstName:names[0] lastName:names[1] salary:randSalary];
-        [self addEmployee:employee];
-    }
-    
-}
-
 - (void)addEmployee:(Employee *)employee
 {
     self.employees = [self.employees setByAddingObject:employee];

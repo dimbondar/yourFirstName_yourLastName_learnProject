@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) NSPersistentContainer *persistentContainer;
 
-+(AppDelegate *)instance;
++ (AppDelegate *)instance;
 
 @end
 

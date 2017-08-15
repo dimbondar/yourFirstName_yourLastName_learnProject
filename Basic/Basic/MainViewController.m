@@ -25,9 +25,9 @@
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"OrganizationModel"];
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name = %@",@"ggg"]];
-    int count = (int)[[[AppDelegate instance] persistentContainer].viewContext countForFetchRequest:fetchRequest error:nil];
+    int organizationsAmount = (int)[[[AppDelegate instance] persistentContainer].viewContext countForFetchRequest:fetchRequest error:nil];
     
-    if( count== 0)
+    if (organizationsAmount == 0)
     {
         self.organization = [NSEntityDescription insertNewObjectForEntityForName:@"OrganizationModel" inManagedObjectContext:[[AppDelegate instance] persistentContainer].viewContext];
         self.organization.name = @"ggg";

@@ -11,8 +11,6 @@
 
 @interface Organization(CustomOrganization)
 
-- (id)initWithName:(NSString *)organizationName;
-- (void)addEmployeeWithName:(NSString *)employeeName;
 - (void)addEmployee:(Employee *)employee;
 - (double)calculateAverageSalary;
 - (int)employeeWithLowestSalary;

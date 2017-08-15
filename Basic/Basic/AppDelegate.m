@@ -17,7 +17,7 @@
 
 @implementation AppDelegate
 
-+(AppDelegate *)instance
++ (AppDelegate *)instance
 {
     return (AppDelegate *)[UIApplication sharedApplication].delegate;
 }
@@ -25,10 +25,13 @@
 
 - (NSPersistentContainer *)persistentContainer
 {
-    if (_persistentContainer == nil) {
+    if (!_persistentContainer)
+    {
         _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Model"];
-        [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
-            if (error != nil) {
+        [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error)
+        {
+            if (error)
+            {
                 NSLog(@"Unresolved error %@, %@", error, error.userInfo);
                 abort();
             }
