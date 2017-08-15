@@ -9,16 +9,11 @@
 #import "CreateEmployeeViewController.h"
 #import "Employee+Custom.h"
 
-@interface CreateEmployeeViewController ()
-
-@end
-
 @implementation CreateEmployeeViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,12 +31,30 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)dateChanged:(id)sender
+{
+    [self startDate:self];
+}
 - (IBAction)onSaveClick:(id)sender
 {
-//    Employee *newEmployee = [[Employee alloc] iniitWithFirstName:self.firstName.text lastName:self.lastName.text salary:[self.salary.text intValue]];
     [self.employee initWithFirstName:self.firstName.text lastName:self.lastName.text salary:[self.salary.text intValue]];
     [self.delagate onSave:self.employee];
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)startDate:(id)sender
+{
+    self.date.text = @"";
+    self.employee.dateOfBirth = nil;
+    
+    HSDatePickerViewController *hsdpvc = [[HSDatePickerViewController alloc] init];
+    hsdpvc.delegate = self;
+    [self presentViewController:hsdpvc animated:YES completion:nil];
+}
+
+- (void)hsDatePickerPickedDate:(NSDate *)date
+{
+    self.date.text = [NSString stringWithFormat:@"%@", date];
+    self.employee.dateOfBirth = date;
 }
 
 @end

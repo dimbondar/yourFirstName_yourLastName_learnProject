@@ -2,7 +2,7 @@
 //  Employee+CoreDataClass.h
 //  Basic
 //
-//  Created by Dima Bondar on 14.08.17.
+//  Created by Dima Bondar on 15.08.17.
 //  Copyright © 2017 Dima. All rights reserved.
 //
 
