@@ -1,50 +1,19 @@
 //
-//  Organization.m
+//  Organization+Custom.m
 //  Basic
 //
-//  Created by Dima Bondar on 04.08.17.
-//  Copyright © 2017 Dima Bondar. All rights reserved.
+//  Created by Dima Bondar on 14.08.17.
+//  Copyright © 2017 Dima. All rights reserved.
 //
 
-#import "Organization.h"
-#import "Employee.h"
-#include "stdlib.h"
+#import "Organization+Custom.h"
+#import "Employee+Custom.h"
 
-//@interface Organization()
-//
-//@property(strong, nonatomic)NSArray<Employee *> *employees;
-//
-//@end
-
-@implementation Organization
-
-- (id)initWithName:(NSString *)organizationName
-{
-    self = [super init];
-    
-    self.name = organizationName;
-    self.employees = [[NSMutableArray alloc] init];
-    return self;
-}
-
-- (void)addEmployeeWithName:(NSString *)employeeName
-{
-    NSArray<NSString *> *names = [employeeName componentsSeparatedByString:@" "];
-    
-    if(([names count]) == 2)
-    {
-        int randSalary = (arc4random_uniform(490) + 10) * 10;
-        NSLog(@"Random salary: %i", randSalary);
-        Employee *employee =
-        [[Employee alloc] initWithFirstName:names[0] lastName:names[1] salary:randSalary];
-        [self addEmployee:employee];
-    }
-    
-}
+@implementation Organization(CustomOrganization)
 
 - (void)addEmployee:(Employee *)employee
 {
-    self.employees = [self.employees arrayByAddingObject:employee];
+    self.employees = [self.employees setByAddingObject:employee];
 }
 
 - (double)calculateAverageSalary
@@ -74,7 +43,7 @@
         return 0;
     }
     
-    int lowestSalary = self.employees.firstObject.salary;
+    int lowestSalary = self.employees.anyObject.salary;
     
     for (Employee * em in self.employees)
     {

@@ -7,6 +7,7 @@
 //
 
 #import "CreateEmployeeViewController.h"
+#import "Employee+Custom.h"
 
 @interface CreateEmployeeViewController ()
 
@@ -37,8 +38,9 @@
 */
 - (IBAction)onSaveClick:(id)sender
 {
-    Employee *newemployee = [[Employee alloc] initWithFirstName:self.firstName.text lastName:self.lastName.text salary:[self.salary.text intValue]];
-    [self.delagate onSave:newemployee];
+//    Employee *newEmployee = [[Employee alloc] iniitWithFirstName:self.firstName.text lastName:self.lastName.text salary:[self.salary.text intValue]];
+    [self.employee initWithFirstName:self.firstName.text lastName:self.lastName.text salary:[self.salary.text intValue]];
+    [self.delagate onSave:self.employee];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

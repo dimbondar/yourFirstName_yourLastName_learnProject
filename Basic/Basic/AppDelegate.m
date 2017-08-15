@@ -9,41 +9,43 @@
 #import "AppDelegate.h"
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "Employee.h"
-#import "Organization.h"
 #include "stdlib.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UINavigationControllerDelegate>
 
 @end
 
 @implementation AppDelegate
 
++ (AppDelegate *)instance
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+
+- (NSPersistentContainer *)persistentContainer
+{
+    if (!_persistentContainer)
+    {
+        _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Model"];
+        [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error)
+        {
+            if (error)
+            {
+                NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+                abort();
+            }
+        }];
+    }
+    return _persistentContainer;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-        
-    Employee *empl = [[Employee alloc] initWithFirstName:@"Dima" lastName:@"Bondar" salary:1200];
     
-    NSLog(@"Full name: %@", [empl fullName]);
-    
-    Organization * organ = [[Organization alloc]initWithName:@"ww ee"];
-    
-    [organ addEmployeeWithName:@"tt rr"];
-    [organ addEmployeeWithName:@"tw rw"];
-    [organ addEmployeeWithName:@"tc rc"];
-    [organ addEmployee:empl];
-    
-    NSLog(@"Avarage salary: %f", [organ calculateAverageSalary]);
-    NSLog(@"LowestSalary: %i", [organ employeeWithLowestSalary]);
-    for (Employee * em in [organ employeesWithSalary:1300 tolerance:200]) {
-        NSLog(@"Tolerance: %i", em.salary);
-    }
-    
-    [organ removeEmployee:empl];
-    
-    NSLog(@"Avarage salary: %f", [organ calculateAverageSalary]);
-
+//    UINavigationController *navigation = (UINavigationController *)self.window.rootViewController;
+//    navigation.delegate = self;
+//    MainViewController *mainView = (MainViewController*)[navigation topViewController];
+//    mainView.managedObjectContext = self.persistentContainer.viewContext;
     return YES;
 }
 
@@ -73,6 +75,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end

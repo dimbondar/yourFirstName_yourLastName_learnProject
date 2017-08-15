@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "Employee+Custom.h"
+
 
 @implementation DetailViewController
 
