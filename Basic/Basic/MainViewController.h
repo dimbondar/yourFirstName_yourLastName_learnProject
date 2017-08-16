@@ -13,4 +13,6 @@
 
 @interface MainViewController : UITableViewController<CreateEmployeeDelegate>
 
+- (void)changeOrder:(NSNotification *) notification;
+
 @end

@@ -24,6 +24,8 @@
 
 - (void) viewDidLoad
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeOrder:) name:@"ChangeOrderNotification" object:nil];
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"OrganizationModel"];
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name = %@",@"ggg"]];
     int organizationsAmount = (int)[[[AppDelegate instance] persistentContainer].viewContext countForFetchRequest:fetchRequest error:nil];
@@ -52,14 +54,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    NSOrderedSet *ordSet = self.organization.employees;
+    
     UITableViewCell *tableCell = [tableView dequeueReusableCellWithIdentifier:@"employeeTableCell"];
-    tableCell.textLabel.text = self.organization.employees.allObjects[indexPath.row].fullName;
+    tableCell.textLabel.text = [self.organization.employees objectAtIndex:indexPath.row].fullName;
     return tableCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedEmployee = self.organization.employees.allObjects[indexPath.row];
+    self.selectedEmployee = [self.organization.employees objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"toEmployeeDetail" sender:self];
 }
 
@@ -93,7 +97,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        Employee *ob = self.organization.employees.allObjects[(int)indexPath.row];
+        Employee *ob = [self.organization.employees objectAtIndex:indexPath.row];
         [[[AppDelegate instance] persistentContainer].viewContext deleteObject: ob];
         NSError *error = nil;
         // Save the object to persistent store
@@ -126,7 +130,36 @@
     {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
+    [self.tableView reloadData];
+}
+
+- (void)changeOrder:(NSNotification *) notification
+{
+    NSMutableArray<Employee *> *employeesNewOrder = [[NSMutableArray alloc] initWithCapacity: self.organization.employees.count];
+    int employeeCount = (int)self.organization.employees.count;
     
+    for (int i = 0; i != employeeCount; i++)
+    {
+        int randomIndex = arc4random_uniform(employeeCount);
+        Employee *emplo = [self.organization.employees objectAtIndex:arc4random_uniform(employeeCount)];
+        
+        while ([employeesNewOrder containsObject:emplo])
+        {
+            if (randomIndex+1 == employeeCount)
+            {
+                randomIndex = 0;
+            }
+            else
+            {
+                randomIndex++;
+            }
+            emplo = [self.organization.employees objectAtIndex:randomIndex];
+        }
+        
+        employeesNewOrder[i] = emplo;
+    }
+    
+    self.organization.employees = [NSOrderedSet orderedSetWithArray:employeesNewOrder.copy];
     [self.tableView reloadData];
 }
 

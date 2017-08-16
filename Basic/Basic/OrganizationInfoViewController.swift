@@ -11,15 +11,18 @@ import UIKit
 class OrganizationInfoViewController: UIViewController
 {
     var organization: Organization?
-
+    
+    @IBAction func changeemployeeOrder(_ sender: UIButton)
+    {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ChangeOrderNotification"), object: nil)
+    }
     @IBAction func  showSalarySum(_ sender: UIButton)
     {
         var salarySum:Int32 = 0;
 
-
         for employee in self.organization!.employees!
         {
-            salarySum +=  employee.salary
+            salarySum +=  (employee as! Employee).salary
         }
         
         let alert = UIAlertController(title: "Organization: \(self.organization!.name!)", message: "Sum of salaries of all employees is: \(salarySum)", preferredStyle: .alert)

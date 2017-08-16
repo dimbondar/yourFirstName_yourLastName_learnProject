@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3209A1E11F3DF92C00BDDEA6 /* Organization+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209A1DE1F3DF92C00BDDEA6 /* Organization+CoreDataClass.m */; };
-		3209A1E21F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209A1E01F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m */; };
 		32185B821F3865E70023AF95 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32185B811F3865E70023AF95 /* MainViewController.m */; };
 		32185B851F3888A30023AF95 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32185B841F3888A30023AF95 /* DetailViewController.m */; };
 		3230A7611F3DAF3D00E68F5B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3230A75F1F3DAF3D00E68F5B /* Model.xcdatamodeld */; };
@@ -20,6 +18,8 @@
 		3243947E1F34B69F00425249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3243947D1F34B69F00425249 /* Assets.xcassets */; };
 		324394811F34B69F00425249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243947F1F34B69F00425249 /* LaunchScreen.storyboard */; };
 		3245677B1F445897000AB3B2 /* OrganizationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245677A1F445897000AB3B2 /* OrganizationInfoViewController.swift */; };
+		324567861F448EF1000AB3B2 /* Organization+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 324567831F448EF1000AB3B2 /* Organization+CoreDataClass.m */; };
+		324567871F448EF1000AB3B2 /* Organization+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 324567851F448EF1000AB3B2 /* Organization+CoreDataProperties.m */; };
 		3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */; };
 		32F56ABB1F41CDE50069DE76 /* Employee+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F56AB91F41CAB70069DE76 /* Employee+Custom.m */; };
 		32F56AC51F41DB230069DE76 /* Organization+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F56AC41F41DB230069DE76 /* Organization+Custom.m */; };
@@ -27,10 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3209A1DD1F3DF92C00BDDEA6 /* Organization+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Organization+CoreDataClass.h"; path = "Basic/Organization+CoreDataClass.h"; sourceTree = "<group>"; };
-		3209A1DE1F3DF92C00BDDEA6 /* Organization+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Organization+CoreDataClass.m"; path = "Basic/Organization+CoreDataClass.m"; sourceTree = "<group>"; };
-		3209A1DF1F3DF92C00BDDEA6 /* Organization+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Organization+CoreDataProperties.h"; path = "Basic/Organization+CoreDataProperties.h"; sourceTree = "<group>"; };
-		3209A1E01F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Organization+CoreDataProperties.m"; path = "Basic/Organization+CoreDataProperties.m"; sourceTree = "<group>"; };
 		32185B801F3865E70023AF95 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		32185B811F3865E70023AF95 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		32185B831F3888A30023AF95 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -50,6 +46,10 @@
 		324394821F34B69F00425249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		324567791F445896000AB3B2 /* Basic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Basic-Bridging-Header.h"; sourceTree = "<group>"; };
 		3245677A1F445897000AB3B2 /* OrganizationInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoViewController.swift; sourceTree = "<group>"; };
+		324567821F448EF1000AB3B2 /* Organization+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+CoreDataClass.h"; sourceTree = "<group>"; };
+		324567831F448EF1000AB3B2 /* Organization+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+CoreDataClass.m"; sourceTree = "<group>"; };
+		324567841F448EF1000AB3B2 /* Organization+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+CoreDataProperties.h"; sourceTree = "<group>"; };
+		324567851F448EF1000AB3B2 /* Organization+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+CoreDataProperties.m"; sourceTree = "<group>"; };
 		3261CFA31F39BFD90069F2C2 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
 		32F56AB81F41CAB70069DE76 /* Employee+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+Custom.h"; sourceTree = "<group>"; };
@@ -76,6 +76,10 @@
 		324394651F34B69F00425249 = {
 			isa = PBXGroup;
 			children = (
+				324567821F448EF1000AB3B2 /* Organization+CoreDataClass.h */,
+				324567831F448EF1000AB3B2 /* Organization+CoreDataClass.m */,
+				324567841F448EF1000AB3B2 /* Organization+CoreDataProperties.h */,
+				324567851F448EF1000AB3B2 /* Organization+CoreDataProperties.m */,
 				3232DE051F431C9F00598FB3 /* Employee+CoreDataClass.h */,
 				3232DE061F431C9F00598FB3 /* Employee+CoreDataClass.m */,
 				3232DE071F431C9F00598FB3 /* Employee+CoreDataProperties.h */,
@@ -84,10 +88,6 @@
 				32F56AC41F41DB230069DE76 /* Organization+Custom.m */,
 				32F56AB81F41CAB70069DE76 /* Employee+Custom.h */,
 				32F56AB91F41CAB70069DE76 /* Employee+Custom.m */,
-				3209A1DD1F3DF92C00BDDEA6 /* Organization+CoreDataClass.h */,
-				3209A1DE1F3DF92C00BDDEA6 /* Organization+CoreDataClass.m */,
-				3209A1DF1F3DF92C00BDDEA6 /* Organization+CoreDataProperties.h */,
-				3209A1E01F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m */,
 				324394701F34B69F00425249 /* Basic */,
 				3243946F1F34B69F00425249 /* Products */,
 				9D89E0301642310A3103EFFA /* Pods */,
@@ -280,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324567861F448EF1000AB3B2 /* Organization+CoreDataClass.m in Sources */,
+				324567871F448EF1000AB3B2 /* Organization+CoreDataProperties.m in Sources */,
 				32F56ABB1F41CDE50069DE76 /* Employee+Custom.m in Sources */,
 				324394761F34B69F00425249 /* AppDelegate.m in Sources */,
 				3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */,
@@ -290,9 +292,7 @@
 				3232DE091F431C9F00598FB3 /* Employee+CoreDataClass.m in Sources */,
 				324394731F34B69F00425249 /* main.m in Sources */,
 				32185B821F3865E70023AF95 /* MainViewController.m in Sources */,
-				3209A1E21F3DF92C00BDDEA6 /* Organization+CoreDataProperties.m in Sources */,
 				32185B851F3888A30023AF95 /* DetailViewController.m in Sources */,
-				3209A1E11F3DF92C00BDDEA6 /* Organization+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
