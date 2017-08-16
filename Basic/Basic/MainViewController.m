@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "Organization+Custom.h"
 #import "Employee+Custom.h"
+#import "Basic-Swift.h"
 
 @interface MainViewController()
 
@@ -76,6 +77,11 @@
         Employee *emplo = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"EmployeeModel" inManagedObjectContext:[[AppDelegate instance] persistentContainer].viewContext];
         createEVC.employee = emplo;
     }
+    else if ([segue.identifier isEqualToString:@"toOrganizationInfo"])
+    {
+        OrganizationInfoViewController *organizationinfoVC = (OrganizationInfoViewController *)segue.destinationViewController;
+        organizationinfoVC.organization = self.organization;
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,6 +104,10 @@
         
         [self.tableView reloadData];
     }
+}
+- (IBAction)onEditClick:(id)sender
+{
+    [self performSegueWithIdentifier:@"toOrganizationInfo" sender:self];
 }
 
 
