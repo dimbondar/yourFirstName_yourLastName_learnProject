@@ -19,6 +19,7 @@
 		3243947C1F34B69F00425249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243947A1F34B69F00425249 /* Main.storyboard */; };
 		3243947E1F34B69F00425249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3243947D1F34B69F00425249 /* Assets.xcassets */; };
 		324394811F34B69F00425249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243947F1F34B69F00425249 /* LaunchScreen.storyboard */; };
+		3245677B1F445897000AB3B2 /* OrganizationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245677A1F445897000AB3B2 /* OrganizationInfoViewController.swift */; };
 		3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */; };
 		32F56ABB1F41CDE50069DE76 /* Employee+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F56AB91F41CAB70069DE76 /* Employee+Custom.m */; };
 		32F56AC51F41DB230069DE76 /* Organization+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F56AC41F41DB230069DE76 /* Organization+Custom.m */; };
@@ -47,6 +48,8 @@
 		3243947D1F34B69F00425249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		324394801F34B69F00425249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		324394821F34B69F00425249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		324567791F445896000AB3B2 /* Basic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Basic-Bridging-Header.h"; sourceTree = "<group>"; };
+		3245677A1F445897000AB3B2 /* OrganizationInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoViewController.swift; sourceTree = "<group>"; };
 		3261CFA31F39BFD90069F2C2 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
 		32F56AB81F41CAB70069DE76 /* Employee+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+Custom.h"; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				3243947F1F34B69F00425249 /* LaunchScreen.storyboard */,
 				324394821F34B69F00425249 /* Info.plist */,
 				324394711F34B69F00425249 /* Supporting Files */,
+				3245677A1F445897000AB3B2 /* OrganizationInfoViewController.swift */,
+				324567791F445896000AB3B2 /* Basic-Bridging-Header.h */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				TargetAttributes = {
 					3243946D1F34B69F00425249 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -278,6 +284,7 @@
 				324394761F34B69F00425249 /* AppDelegate.m in Sources */,
 				3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */,
 				3232DE0A1F431C9F00598FB3 /* Employee+CoreDataProperties.m in Sources */,
+				3245677B1F445897000AB3B2 /* OrganizationInfoViewController.swift in Sources */,
 				32F56AC51F41DB230069DE76 /* Organization+Custom.m in Sources */,
 				3230A7611F3DAF3D00E68F5B /* Model.xcdatamodeld in Sources */,
 				3232DE091F431C9F00598FB3 /* Employee+CoreDataClass.m in Sources */,
@@ -406,10 +413,14 @@
 			baseConfigurationReference = 6E1BC46E4394954E3DBF7501 /* Pods-Basic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Basic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.Basic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Basic/Basic-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -419,10 +430,13 @@
 			baseConfigurationReference = 874E3626E4BA7477A7D91554 /* Pods-Basic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Basic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.Basic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Basic/Basic-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

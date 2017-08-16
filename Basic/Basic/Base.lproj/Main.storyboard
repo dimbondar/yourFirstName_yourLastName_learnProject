@@ -44,6 +44,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Lfq-v4-b3U">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="pXk-OE-ZwQ">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onEditClick:" destination="nCe-CP-t6c" id="JCj-kj-Fgn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GI5-lZ-ijV">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -54,11 +60,12 @@
                     <connections>
                         <segue destination="YNy-vs-u9Y" kind="push" identifier="toEmployeeDetail" id="CoH-uv-Jq9"/>
                         <segue destination="OeU-O9-5Qg" kind="push" identifier="toCreateEmployee" id="jgY-Yf-5nj"/>
+                        <segue destination="96P-tX-CPT" kind="push" identifier="toOrganizationInfo" id="gQa-4M-NJ5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ki-Qj-wJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-754.39999999999998" y="-180.35982008995504"/>
+            <point key="canvasLocation" x="-823" y="-27"/>
         </scene>
         <!--Create Employee View Controller-->
         <scene sceneID="sYY-qK-KOM">
@@ -187,7 +194,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i69-EV-Mmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21.600000000000001" y="141.67916041979012"/>
+            <point key="canvasLocation" x="22" y="-4"/>
+        </scene>
+        <!--Organization Info View Controller-->
+        <scene sceneID="SgZ-SY-i1O">
+            <objects>
+                <viewController id="96P-tX-CPT" customClass="OrganizationInfoViewController" customModule="Basic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YPg-La-dIN"/>
+                        <viewControllerLayoutGuide type="bottom" id="gTa-zf-xBi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9rf-KM-KKf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuC-39-hEA">
+                                <rect key="frame" x="81" y="313" width="212" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Calculate salary sum">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSalarySum:" destination="96P-tX-CPT" eventType="touchUpInside" id="z6S-uK-K0U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RuC-39-hEA" firstAttribute="centerY" secondItem="9rf-KM-KKf" secondAttribute="centerY" id="ORe-RE-mre"/>
+                            <constraint firstItem="RuC-39-hEA" firstAttribute="centerX" secondItem="9rf-KM-KKf" secondAttribute="centerX" id="lAa-Am-Lew"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ifH-8S-ZnS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBD-Cg-ccX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="716"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="x2c-a7-YLW">
@@ -232,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hkr-PE-Evq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21.600000000000001" y="-609.44527736131943"/>
+            <point key="canvasLocation" x="22" y="-658"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TW4-Pc-v45">
