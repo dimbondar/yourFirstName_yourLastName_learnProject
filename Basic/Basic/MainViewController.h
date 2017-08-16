@@ -13,6 +13,4 @@
 
 @interface MainViewController : UITableViewController<CreateEmployeeDelegate>
 
-//@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
 @end

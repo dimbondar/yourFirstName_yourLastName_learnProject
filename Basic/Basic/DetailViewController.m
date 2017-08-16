@@ -17,6 +17,7 @@
     self.title = self.employee.fullName;
     NSString *sal = [NSString stringWithFormat:@"Salary is %i", self.employee.salary];
     self.salary.text = sal;
+    self.dateTextField.text = self.employee.dateOfBirth.description;
 }
 
 @end

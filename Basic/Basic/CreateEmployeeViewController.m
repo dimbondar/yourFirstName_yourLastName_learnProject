@@ -8,17 +8,18 @@
 
 #import "CreateEmployeeViewController.h"
 #import "Employee+Custom.h"
+#import "HSDatePickerViewController.h"
 
-@interface CreateEmployeeViewController ()
+
+@interface CreateEmployeeViewController() <HSDatePickerViewControllerDelegate>
 
 @end
 
-@implementation CreateEmployeeViewController
+@implementation CreateEmployeeViewController 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,12 +37,32 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)dateChanged:(id)sender
+{
+    [self showDatePicker:self];
+}
+
 - (IBAction)onSaveClick:(id)sender
 {
-//    Employee *newEmployee = [[Employee alloc] iniitWithFirstName:self.firstName.text lastName:self.lastName.text salary:[self.salary.text intValue]];
     [self.employee initWithFirstName:self.firstName.text lastName:self.lastName.text salary:[self.salary.text intValue]];
     [self.delagate onSave:self.employee];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)showDatePicker:(id)sender
+{
+    self.dateTextField.text = self.employee.dateOfBirth.description;
+    
+    HSDatePickerViewController *hsdpvc = [[HSDatePickerViewController alloc] init];
+    hsdpvc.delegate = self;
+    [self presentViewController:hsdpvc animated:YES completion:nil];
+}
+
+- (void)hsDatePickerPickedDate:(NSDate *)date
+{
+    self.dateTextField.text = [NSString stringWithFormat:@"%@", date];
+    self.employee.dateOfBirth = date;
 }
 
 @end

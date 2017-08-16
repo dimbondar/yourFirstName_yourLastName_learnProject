@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="EmployeeModel" representedClassName="Employee" syncable="YES">
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="salary" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="organization" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationModel" inverseName="employees" inverseEntity="OrganizationModel" syncable="YES"/>
@@ -10,7 +11,7 @@
         <relationship name="employees" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EmployeeModel" inverseName="organization" inverseEntity="EmployeeModel" syncable="YES"/>
     </entity>
     <elements>
-        <element name="EmployeeModel" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="EmployeeModel" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="OrganizationModel" positionX="-54" positionY="9" width="128" height="75"/>
     </elements>
 </model>

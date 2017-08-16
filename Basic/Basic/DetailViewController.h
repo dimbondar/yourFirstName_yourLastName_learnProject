@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) Employee *employee;
 @property (weak, nonatomic) IBOutlet UILabel *salary;
+@property (weak, nonatomic) IBOutlet UILabel *dateTextField;
 
 @end
