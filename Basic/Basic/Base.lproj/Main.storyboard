@@ -134,7 +134,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="dateChanged:" destination="OeU-O9-5Qg" eventType="editingChanged" id="G2k-GG-8Aj"/>
-                                    <action selector="startDate:" destination="OeU-O9-5Qg" eventType="editingDidBegin" id="ZkM-lx-wow"/>
+                                    <action selector="showDatePicker:" destination="OeU-O9-5Qg" eventType="editingDidBegin" id="VW4-V4-bkK"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -179,7 +179,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="date" destination="NbB-H4-0J8" id="lPZ-0F-t3J"/>
+                        <outlet property="dateTextField" destination="NbB-H4-0J8" id="5AL-b4-wea"/>
                         <outlet property="firstName" destination="Fax-8Y-DwH" id="Iow-nV-HfS"/>
                         <outlet property="lastName" destination="iCR-6M-ekA" id="MUO-cH-uxk"/>
                         <outlet property="salary" destination="e57-4y-yjX" id="ixF-Ij-yOS"/>
@@ -226,7 +226,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5RA-DE-TJf"/>
                     <connections>
-                        <outlet property="date" destination="hei-De-sr5" id="5fn-MD-pte"/>
+                        <outlet property="dateTextField" destination="hei-De-sr5" id="Em4-cK-H75"/>
                         <outlet property="salary" destination="dVE-JA-BMl" id="u0g-uR-g27"/>
                     </connections>
                 </viewController>
