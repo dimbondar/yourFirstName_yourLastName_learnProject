@@ -10,34 +10,21 @@ import UIKit
 
 class OrganizationInfoViewController: UIViewController
 {
-
-    var organization:Organization?
-    var salarySum:Int32?
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()        
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
+    var organization: Organization?
 
     @IBAction func  showSalarySum(_ sender: UIButton)
     {
-        if (salarySum == nil)
+        var salarySum:Int32 = 0;
+
+
+        for employee in self.organization!.employees!
         {
-            salarySum = 0;
-            for item:Employee in (organization!.employees)!
-            {
-                salarySum! +=  item.salary
-            }
+            salarySum +=  employee.salary
         }
         
-        let alert = UIAlertController(title: "Organization: \(organization!.name!)", message: "Sum of salaries of all employees is: \(salarySum!)", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Organization: \(self.organization!.name!)", message: "Sum of salaries of all employees is: \(salarySum)", preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in print("done")});
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil);
         
         alert.addAction(okAction);
         self.present(alert, animated: true, completion: nil);

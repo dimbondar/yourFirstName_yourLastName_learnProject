@@ -10,7 +10,6 @@
 #import "DetailViewController.h"
 #import "CreateEmployeeViewController.h"
 #import <CoreData/CoreData.h>
-#import "Basic-Swift.h"
 
 @interface MainViewController : UITableViewController<CreateEmployeeDelegate>
 
