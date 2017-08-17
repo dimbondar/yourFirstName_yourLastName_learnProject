@@ -20,10 +20,11 @@
 		3245677B1F445897000AB3B2 /* OrganizationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245677A1F445897000AB3B2 /* OrganizationInfoViewController.swift */; };
 		324567861F448EF1000AB3B2 /* Organization+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 324567831F448EF1000AB3B2 /* Organization+CoreDataClass.m */; };
 		324567871F448EF1000AB3B2 /* Organization+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 324567851F448EF1000AB3B2 /* Organization+CoreDataProperties.m */; };
+		324858D81F45CFD60064A950 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324858D71F45CFD60064A950 /* RequestManager.swift */; };
 		3261CFA51F39BFD90069F2C2 /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */; };
 		32F56ABB1F41CDE50069DE76 /* Employee+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F56AB91F41CAB70069DE76 /* Employee+Custom.m */; };
 		32F56AC51F41DB230069DE76 /* Organization+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F56AC41F41DB230069DE76 /* Organization+Custom.m */; };
-		5D43EF4DA8A30687940FE696 /* libPods-Basic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF93E37ABCEB6996B8369BA8 /* libPods-Basic.a */; };
+		6825525B44A51B07200BA136 /* Pods_Basic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794BBE7007EFACF26701E434 /* Pods_Basic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		324567831F448EF1000AB3B2 /* Organization+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+CoreDataClass.m"; sourceTree = "<group>"; };
 		324567841F448EF1000AB3B2 /* Organization+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+CoreDataProperties.h"; sourceTree = "<group>"; };
 		324567851F448EF1000AB3B2 /* Organization+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+CoreDataProperties.m"; sourceTree = "<group>"; };
+		324858D71F45CFD60064A950 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		3261CFA31F39BFD90069F2C2 /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		3261CFA41F39BFD90069F2C2 /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
 		32F56AB81F41CAB70069DE76 /* Employee+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+Custom.h"; sourceTree = "<group>"; };
@@ -57,8 +59,8 @@
 		32F56AC31F41DB230069DE76 /* Organization+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+Custom.h"; sourceTree = "<group>"; };
 		32F56AC41F41DB230069DE76 /* Organization+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+Custom.m"; sourceTree = "<group>"; };
 		6E1BC46E4394954E3DBF7501 /* Pods-Basic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basic/Pods-Basic.debug.xcconfig"; sourceTree = "<group>"; };
+		794BBE7007EFACF26701E434 /* Pods_Basic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Basic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		874E3626E4BA7477A7D91554 /* Pods-Basic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Basic/Pods-Basic.release.xcconfig"; sourceTree = "<group>"; };
-		DF93E37ABCEB6996B8369BA8 /* libPods-Basic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Basic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D43EF4DA8A30687940FE696 /* libPods-Basic.a in Frameworks */,
+				6825525B44A51B07200BA136 /* Pods_Basic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +124,7 @@
 				324394711F34B69F00425249 /* Supporting Files */,
 				3245677A1F445897000AB3B2 /* OrganizationInfoViewController.swift */,
 				324567791F445896000AB3B2 /* Basic-Bridging-Header.h */,
+				324858D71F45CFD60064A950 /* RequestManager.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -137,7 +140,7 @@
 		71F1F14D2F0D9DCC714AA100 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DF93E37ABCEB6996B8369BA8 /* libPods-Basic.a */,
+				794BBE7007EFACF26701E434 /* Pods_Basic.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -246,9 +249,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Basic/Pods-Basic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HSDatePickerViewController/HSDatePickerViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HSDatePickerViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,6 +299,7 @@
 				3230A7611F3DAF3D00E68F5B /* Model.xcdatamodeld in Sources */,
 				3232DE091F431C9F00598FB3 /* Employee+CoreDataClass.m in Sources */,
 				324394731F34B69F00425249 /* main.m in Sources */,
+				324858D81F45CFD60064A950 /* RequestManager.swift in Sources */,
 				32185B821F3865E70023AF95 /* MainViewController.m in Sources */,
 				32185B851F3888A30023AF95 /* DetailViewController.m in Sources */,
 			);

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HSDatePickerViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C42630B2C5CE9EBC52F895E367A87286</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F90042058B32EAB27D6C41E9056BDE47</key>
+		<key>CB37792879AFEB40A9BB515BF6949CD5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2B59214891058300A8B59900C004064</key>
 		<dict>
 			<key>primary</key>
 			<true/>
