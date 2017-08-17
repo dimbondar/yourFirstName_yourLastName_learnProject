@@ -10,11 +10,12 @@ import UIKit
 
 class OrganizationInfoViewController: UIViewController
 {
+    static let notificationName = NSNotification.Name("ChangeOrderNotification")
     var organization: Organization?
     
     @IBAction func changeemployeeOrder(_ sender: UIButton)
     {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ChangeOrderNotification"), object: nil)
+        NotificationCenter.default.post(name: OrganizationInfoViewController.notificationName, object: nil)
     }
     @IBAction func  showSalarySum(_ sender: UIButton)
     {

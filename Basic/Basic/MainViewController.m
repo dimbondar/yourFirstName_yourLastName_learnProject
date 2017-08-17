@@ -22,9 +22,14 @@
 
 @implementation MainViewController
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void) viewDidLoad
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeOrder:) name:@"ChangeOrderNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeOrder:) name:OrganizationInfoViewController.notificationName object:nil];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"OrganizationModel"];
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name = %@",@"ggg"]];
@@ -145,7 +150,7 @@
         
         while ([employeesNewOrder containsObject:emplo])
         {
-            if (randomIndex+1 == employeeCount)
+            if (randomIndex + 1 == employeeCount)
             {
                 randomIndex = 0;
             }
