@@ -8,12 +8,15 @@
 
 #import "Organization+Custom.h"
 #import "Employee+Custom.h"
+#include <stdlib.h>
 
 @implementation Organization(CustomOrganization)
 
 - (void)addEmployee:(Employee *)employee
 {
-    self.employees = [self.employees setByAddingObject:employee];
+    NSMutableOrderedSet *mutSet = self.employees.mutableCopy;
+    [mutSet addObject:employee];
+    self.employees = mutSet.copy;
 }
 
 - (double)calculateAverageSalary
@@ -43,7 +46,7 @@
         return 0;
     }
     
-    int lowestSalary = self.employees.anyObject.salary;
+    int lowestSalary = self.employees.set.anyObject.salary;
     
     for (Employee * em in self.employees)
     {
