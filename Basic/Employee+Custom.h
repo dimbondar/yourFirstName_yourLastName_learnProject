@@ -12,5 +12,7 @@
 @interface Employee(CustomEmployee)
 
 - (void)initWithFirstName:(NSString *)fn lastName:(NSString *)ln salary:(int)money;
++ (Employee *) parseToEmployee:(NSDictionary<NSString *, id> *) employee;
+
 
 @end

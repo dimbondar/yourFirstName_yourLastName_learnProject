@@ -40,22 +40,24 @@ class OrganizationInfoViewController: UIViewController
     
     @IBAction func clickFetchOrganizations(_ sender: UIButton)
     {
-        let appDel = AppDelegate.instance()
-        let context = appDel!.persistentContainer.viewContext
-        let coord = appDel?.persistentContainer.persistentStoreCoordinator
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "OrganizationModel")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        
-        do {
-            try coord?.execute(deleteRequest, with: context)
-        } catch let error as NSError {
-            debugPrint(error)
-        }
-        
         RequestManager.fetchOrganizations() { response in
-            let organizations = RequestManager.parseToOrganizationArray(json: response!)
-            do{
+            let organizations = Organization.parse(toOrganizationArray: response)
+            do
+            {
+                let appDel = AppDelegate.instance()
+                let context = appDel!.persistentContainer.viewContext
+                let coord = appDel?.persistentContainer.persistentStoreCoordinator
+                
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "OrganizationModel")
+                let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+                
+                do
+                {
+                    try coord?.execute(deleteRequest, with: context)
+                } catch let error as NSError {
+                    debugPrint(error)
+                }
+                
                 try AppDelegate.instance().persistentContainer.viewContext.save()
                 
             } catch
@@ -68,7 +70,7 @@ class OrganizationInfoViewController: UIViewController
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             actionSheet.addAction(cancelAction)
             
-            for organization in organizations
+            for organization in organizations!
             {
                 let action = UIAlertAction(title: organization.name, style: UIAlertActionStyle.default, handler:
                 { alert in
