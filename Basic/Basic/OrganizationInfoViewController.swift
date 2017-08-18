@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BigInt
+import SVProgressHUD
 
 class OrganizationInfoViewController: UIViewController
 {
@@ -14,6 +16,7 @@ class OrganizationInfoViewController: UIViewController
     static let notificationUpdateTable = NSNotification.Name("UpdateTableNotification")
 
     
+    @IBOutlet weak var container: UIView!
     var organization: Organization?
     
     @IBAction func changeemployeeOrder(_ sender: UIButton)
@@ -80,6 +83,38 @@ class OrganizationInfoViewController: UIViewController
             }
             
             self.present(actionSheet, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func clickOnCalculateFibonachiNumber(_ sender: UIButton)
+    {
+        SVProgressHUD.show()
+        SVProgressHUD.setDefaultStyle(.light)
+        SVProgressHUD.setDefaultMaskType(.black)
+        DispatchQueue.global(qos: .background).async {
+            var i = BigInt(0)
+            var j = BigInt(1)
+            var amount = 1;
+            while amount < 100000
+            {
+                j = j + i
+                i = j - i
+                amount += 1
+                print(amount)
+            }
+            
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+                print(j.description)
+                
+                let alert = UIAlertController(title: "Done", message: "see log", preferredStyle: .actionSheet)
+                
+                let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                
+                alert.addAction(action)
+                
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
 }
