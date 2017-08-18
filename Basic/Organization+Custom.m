@@ -8,6 +8,7 @@
 
 #import "Organization+Custom.h"
 #import "Employee+Custom.h"
+#import "AppDelegate.h"
 #include <stdlib.h>
 
 @implementation Organization(CustomOrganization)
@@ -76,6 +77,41 @@
     NSMutableArray *mutEmployees = self.employees.mutableCopy;
     [mutEmployees removeObject:employee];
     self.employees = mutEmployees.copy;
+}
+
++ (NSArray<Organization *> *)parseToOrganizationArray:(NSDictionary<NSString *, id> *)json
+{
+    NSMutableArray<Organization *> *organizations = [[NSMutableArray alloc] init];
+
+    if (json != nil)
+    {
+        NSArray<NSDictionary<NSString *, id> *> *jsonOrganizations = [json objectForKey:@"organizations"];
+        for (NSDictionary<NSString *, id> *organization in jsonOrganizations)
+        {
+            
+            Organization *org = [NSEntityDescription insertNewObjectForEntityForName:@"OrganizationModel" inManagedObjectContext:AppDelegate.instance.persistentContainer.viewContext];
+            
+            org.name = [organization valueForKey:@"name"];
+            
+            NSArray<NSDictionary<NSString *, id> *> *jsonEmployee = [organization valueForKey:@"employees"];
+            
+            for (NSDictionary<NSString *, id> *employee in jsonEmployee)
+            {                
+                Employee *empl = [Employee parseToEmployee:employee];
+                empl.organization = org;
+
+                [org addEmployee:empl];
+            }
+            
+            [organizations addObject:org];
+        }
+        return organizations;
+    }
+    else
+    {
+        return organizations;
+    }
+    
 }
 
 @end

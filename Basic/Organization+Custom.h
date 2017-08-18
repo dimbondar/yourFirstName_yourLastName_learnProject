@@ -17,4 +17,5 @@
 - (NSMutableArray<Employee *> *)employeesWithSalary:(int) salary tolerance:(int)tolerance;
 - (void)removeEmployee:(Employee *)employee;
 
++ (NSArray<Organization *> *)parseToOrganizationArray:(NSDictionary<NSString *, id> *) json;
 @end

@@ -228,12 +228,24 @@
                                     <action selector="changeemployeeOrder:" destination="96P-tX-CPT" eventType="touchUpInside" id="cOy-4z-SNz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UO-Bq-XEt">
+                                <rect key="frame" x="86.5" y="265" width="201" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Fetch organizations">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickFetchOrganizations:" destination="96P-tX-CPT" eventType="touchUpInside" id="jfr-Vr-3bU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RuC-39-hEA" firstAttribute="centerY" secondItem="9rf-KM-KKf" secondAttribute="centerY" id="ORe-RE-mre"/>
                             <constraint firstItem="O2v-1O-gxG" firstAttribute="centerX" secondItem="RuC-39-hEA" secondAttribute="centerX" id="gU5-pl-8b1"/>
                             <constraint firstItem="O2v-1O-gxG" firstAttribute="top" secondItem="RuC-39-hEA" secondAttribute="bottom" constant="8" symbolic="YES" id="iS8-e9-vDo"/>
+                            <constraint firstItem="RuC-39-hEA" firstAttribute="top" secondItem="8UO-Bq-XEt" secondAttribute="bottom" constant="8" symbolic="YES" id="j1z-F0-1vU"/>
+                            <constraint firstItem="8UO-Bq-XEt" firstAttribute="centerX" secondItem="RuC-39-hEA" secondAttribute="centerX" id="kie-zg-FRy"/>
                             <constraint firstItem="RuC-39-hEA" firstAttribute="centerX" secondItem="9rf-KM-KKf" secondAttribute="centerX" id="lAa-Am-Lew"/>
                         </constraints>
                     </view>
