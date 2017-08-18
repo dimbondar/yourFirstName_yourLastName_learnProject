@@ -29,27 +29,11 @@
 
 - (void) viewDidLoad
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeOrder:) name:OrganizationInfoViewController.notificationName object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeOrder:) name:OrganizationInfoViewController.notificationChangeOrder object:nil];
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"OrganizationModel"];
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name = %@",@"ggg"]];
-    int organizationsAmount = (int)[[[AppDelegate instance] persistentContainer].viewContext countForFetchRequest:fetchRequest error:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTable:) name:OrganizationInfoViewController.notificationUpdateTable object:nil];
     
-    if (organizationsAmount == 0)
-    {
-        self.organization = [NSEntityDescription insertNewObjectForEntityForName:@"OrganizationModel" inManagedObjectContext:[[AppDelegate instance] persistentContainer].viewContext];
-        self.organization.name = @"ggg";
-        NSError *error = nil;
-        if (![[[AppDelegate instance] persistentContainer].viewContext save:&error])
-        {
-            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-        }
-    } else
-    {
-        self.organization = [[[AppDelegate instance] persistentContainer].viewContext executeFetchRequest:fetchRequest error:nil].firstObject;
-    }
-    
-    self.title = self.organization.name;
+    [self updateData: @"ggg"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -59,8 +43,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSOrderedSet *ordSet = self.organization.employees;
-    
     UITableViewCell *tableCell = [tableView dequeueReusableCellWithIdentifier:@"employeeTableCell"];
     tableCell.textLabel.text = [self.organization.employees objectAtIndex:indexPath.row].fullName;
     return tableCell;
@@ -165,6 +147,38 @@
     }
     
     self.organization.employees = [NSOrderedSet orderedSetWithArray:employeesNewOrder.copy];
+    [self.tableView reloadData];
+}
+
+- (void)updateTable:(NSNotification *) notification
+{
+    NSString *organizationName = notification.object;
+    [self updateData: organizationName];
+    [self.navigationController popViewControllerAnimated: YES];
+}
+
+- (void)updateData:(NSString *) organizationName
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"OrganizationModel"];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name = %@",organizationName]];
+    int organizationsAmount = (int)[[[AppDelegate instance] persistentContainer].viewContext countForFetchRequest:fetchRequest error:nil];
+    
+    if (organizationsAmount == 0)
+    {
+        self.organization = [NSEntityDescription insertNewObjectForEntityForName:@"OrganizationModel" inManagedObjectContext:[[AppDelegate instance] persistentContainer].viewContext];
+        self.organization.name = @"ggg";
+        NSError *error = nil;
+        if (![[[AppDelegate instance] persistentContainer].viewContext save:&error])
+        {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
+    } else
+    {
+        self.organization = [[[AppDelegate instance] persistentContainer].viewContext executeFetchRequest:fetchRequest error:nil].firstObject;
+    }
+    
+    self.title = self.organization.name;
+    
     [self.tableView reloadData];
 }
 
