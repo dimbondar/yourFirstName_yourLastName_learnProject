@@ -209,8 +209,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuC-39-hEA">
-                                <rect key="frame" x="81" y="313" width="212" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <rect key="frame" x="94" y="315" width="186" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Calculate salary sum">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -219,8 +219,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2v-1O-gxG">
-                                <rect key="frame" x="100" y="361" width="174" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <rect key="frame" x="111" y="359" width="152" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Randomize order">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -229,13 +229,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UO-Bq-XEt">
-                                <rect key="frame" x="86.5" y="265" width="201" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <rect key="frame" x="99" y="271" width="176" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Fetch organizations">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="clickFetchOrganizations:" destination="96P-tX-CPT" eventType="touchUpInside" id="jfr-Vr-3bU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2f-6f-rWm">
+                                <rect key="frame" x="15" y="403" width="345" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Calculate 100000th Fibonacci number">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickOnCalculateFibonachiNumber:" destination="96P-tX-CPT" eventType="touchUpInside" id="r56-vr-V1g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,16 +254,18 @@
                             <constraint firstItem="RuC-39-hEA" firstAttribute="centerY" secondItem="9rf-KM-KKf" secondAttribute="centerY" id="ORe-RE-mre"/>
                             <constraint firstItem="O2v-1O-gxG" firstAttribute="centerX" secondItem="RuC-39-hEA" secondAttribute="centerX" id="gU5-pl-8b1"/>
                             <constraint firstItem="O2v-1O-gxG" firstAttribute="top" secondItem="RuC-39-hEA" secondAttribute="bottom" constant="8" symbolic="YES" id="iS8-e9-vDo"/>
+                            <constraint firstItem="l2f-6f-rWm" firstAttribute="top" secondItem="O2v-1O-gxG" secondAttribute="bottom" constant="8" symbolic="YES" id="iVP-ki-Lxq"/>
                             <constraint firstItem="RuC-39-hEA" firstAttribute="top" secondItem="8UO-Bq-XEt" secondAttribute="bottom" constant="8" symbolic="YES" id="j1z-F0-1vU"/>
                             <constraint firstItem="8UO-Bq-XEt" firstAttribute="centerX" secondItem="RuC-39-hEA" secondAttribute="centerX" id="kie-zg-FRy"/>
                             <constraint firstItem="RuC-39-hEA" firstAttribute="centerX" secondItem="9rf-KM-KKf" secondAttribute="centerX" id="lAa-Am-Lew"/>
+                            <constraint firstItem="l2f-6f-rWm" firstAttribute="centerX" secondItem="O2v-1O-gxG" secondAttribute="centerX" id="pHA-rb-avA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ifH-8S-ZnS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBD-Cg-ccX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="716"/>
+            <point key="canvasLocation" x="21.600000000000001" y="715.59220389805103"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="x2c-a7-YLW">
@@ -304,7 +316,7 @@
         <scene sceneID="TW4-Pc-v45">
             <objects>
                 <navigationController id="fOR-GZ-A2b" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XIG-8u-KrN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XIG-8u-KrN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
